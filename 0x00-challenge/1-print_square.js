@@ -6,7 +6,6 @@
     of the program.
 */
 
-
 if (process.argv.length <= 2) {
     process.stderr.write("Missing argument\n");
     process.stderr.write("Usage: ./1-print_square.js <size>\n");
@@ -16,7 +15,7 @@ if (process.argv.length <= 2) {
 
 size = parseInt(process.argv[2], 10);
 
-if (isNaN(size)) {
+if (size <= 0 || isNaN(size)) {
     process.stderr.write("Invalid argument\n");
     process.stderr.write("Usage: ./1-print_square.js <size>\n");
     process.stderr.write("Example: ./1-print_square.js 8\n");
